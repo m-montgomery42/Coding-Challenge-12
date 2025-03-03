@@ -23,3 +23,14 @@ document.addEventListener('DOMContentLoaded', () => {
         dashboard.appendChild(card);
     });
 });
+
+// Task 2: Updating Dashboard Metrics – Working with NodeLists and Arrays
+document.addEventListener('DOMContentLoaded', () => {
+// Select all elements with the class "metric-card"
+const metricCards = document.querySelectorAll('.metric-card');
+    // Convert the NodeList to an array and update the text of each card
+Array.from(metricCards).forEach((card) => {
+card.innerHTML += ' - Updated'; // Append " - Updated" to the text
+card.style.backgroundColor = '#d3d3d3'; // Change the background color
+    });
+    });
