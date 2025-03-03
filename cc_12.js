@@ -32,7 +32,7 @@ const metricCards = document.querySelectorAll('.metric-card');
     // Convert the NodeList to an array and update the text of each card
 Array.from(metricCards).forEach((card) => {
 card.innerHTML += ' - Updated'; // Append " - Updated" to the text
-card.style.backgroundColor = '#d3d3d3'; // Change the background color
+card.style.backgroundColor = '#3CFF00'; // Change the background color
     });
     });
 
