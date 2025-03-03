@@ -34,3 +34,30 @@ card.innerHTML += ' - Updated'; // Append " - Updated" to the text
 card.style.backgroundColor = '#d3d3d3'; // Change the background color
     });
     });
+
+// Task 3: Dynamic Inventory Management – Adding and Removing Items
+document.addEventListener('DOMContentLoaded', () => {
+    // Function to add a new product item
+    function addInventoryItem(product) {
+    const inventoryList = document.getElementById('inventoryList');
+    const newProduct = document.createElement('li');
+    newProduct.setAttribute('class', 'product-item');
+    newProduct.textContent = product;
+   
+   
+    // Add an event listener to remove the item when clicked
+    newProduct.addEventListener('click', () => {
+    inventoryList.removeChild(newProduct);
+    });
+   
+   
+   // Append the new product item to the inventory list
+   inventoryList.appendChild(newProduct);
+    }
+   
+   
+   // Attach click event listeners to the buttons to add products
+   document.querySelector('button[onclick="addInventoryItem(\'Laptop\')"]').addEventListener('click', () => addInventoryItem('Laptop'));
+   document.querySelector('button[onclick="addInventoryItem(\'Smartphone\')"]').addEventListener('click', () => addInventoryItem('Smartphone'));
+   });
+   
